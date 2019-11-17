@@ -41,5 +41,8 @@ contract Election {
 
     voters[msg.sender] = true;
     candidates[_candidateId].voteCount++;
+
+    //trigger event
+    votedEvent(_candidateId);
   }
 }
